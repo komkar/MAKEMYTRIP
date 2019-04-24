@@ -1,6 +1,7 @@
 package com.mmt.Tests;
 
 
+import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -43,24 +44,34 @@ public class ForFlightPageTest extends TestBase {
 	}
 
 	
-	/*
-	 * @Test public void CountDepartureandReturnFights() throws InterruptedException
-	 * { ForFlightPage.Scrolldown(); ForFlightPage.DepartureFlightCount();
-	 * ForFlightPage.ReturnFlightCount(); }
-	 * 
-	 * 
-	 * @Test public void NonStopFlightsCount() throws InterruptedException {
-	 * ForFlightPage.NonstopCount(); ForFlightPage.Scrolldown();
-	 * ForFlightPage.DepartureFlightCount(); ForFlightPage.ReturnFlightCount(); }
-	 * 
-	 * 
-	 * 
-	 * @Test public void OneStopFlightsCount() throws InterruptedException {
-	 * ForFlightPage.onestopCount(); ForFlightPage.Scrolldown();
-	 * ForFlightPage.DepartureFlightCount(); ForFlightPage.ReturnFlightCount();
-	 * 
-	 * }
-	 */
+	  
+	  @Test(priority = 1,description = "Count of Departure and Return Fights")
+	  public void CountDepartureandReturnFights() throws InterruptedException
+	   {
+		  ForFlightPage.Scrolldown();
+		  ForFlightPage.DepartureFlightCount();
+	      ForFlightPage.ReturnFlightCount();
+	  }
+	 
+	  @Test (priority = 2, description = "Non Stop Departure and Return Flights count")
+	  public void NonStopFlightsCount() throws InterruptedException 
+	   {
+	      ForFlightPage.NonstopCount();
+	      ForFlightPage.Scrolldown();
+	      ForFlightPage.DepartureFlightCount();
+	      ForFlightPage.ReturnFlightCount();
+	      }
+	
+	  @Test (priority = 3, description = "Count of One Stop Departue and Return Flights")
+	  public void OneStopFlightsCount() throws InterruptedException 
+	  {
+	      ForFlightPage.onestopCount();
+	      ForFlightPage.Scrolldown();
+	      ForFlightPage.DepartureFlightCount(); 
+	      ForFlightPage.ReturnFlightCount();
+	  
+	  }
+	 
 	  @DataProvider public Iterator<Object[]> getdatatest() { 
 		  ArrayList<Object[]> testdata = TestUtility.getDatafromExcel();
 		  return testdata.iterator();
@@ -83,29 +94,31 @@ public class ForFlightPageTest extends TestBase {
 	        String Returnprice = driver.findElement(By.xpath("(//div[@id='rt-domrt-jrny']//div//label[1]//div[3]/p[1]/span[1])["+Returnradio+"]")).getText();
             System.out.println("total number of records of  Returnprice is :" + Returnprice);
 	      
-	         String DepartBottomPrice=ForFlightPage.DepartBottomPriceM();
-	    	 System.out.println("DepartBottomPrice is :"+ DepartBottomPrice);
-	    	 String ReturnBottomPrice=ForFlightPage.ReturnBottomPriceM();
-	  		 System.out.println("ReturnBottomPrice is :" +ReturnBottomPrice);
-	    	 
-	         String[] DB = DepartBottomPrice.split(" ");
-	         String DBP = DB[1];
-           //  int DBP1 =Integer.parseInt(DBP);
-	         System.out.println("DepartBottomPrice after split  is :" +DBP);
-	  	
-	  		 String[] RB = ReturnBottomPrice.split(" ");
-             String RBP = RB[1];
-             int RBP1 =Integer.parseInt(RBP);
-             System.out.println("ReturnBottomPrice after split  is :" +RBP1);
-             String DRP = DBP + RBP1;   
-             System.out.println("Total adding Departure and Return  is :" +DRP);
+             int DepartBottomPrice = ForFlightPage.DepartBottomPricecount();
+             int ReturnBottomPrice = ForFlightPage.ReturnBottomPricecount();
+			/*
+			 * String DepartBottomPrice=ForFlightPage.DepartBottomPriceM();
+			 * System.out.println("DepartBottomPrice is :"+ DepartBottomPrice); String
+			 * ReturnBottomPrice=ForFlightPage.ReturnBottomPriceM();
+			 * System.out.println("ReturnBottomPrice is :" +ReturnBottomPrice);
+			 * 
+			 * String[] DB = DepartBottomPrice.split(" "); String DBP = DB[1]; // int DBP1
+			 * =Integer.parseInt(DBP);
+			 * System.out.println("DepartBottomPrice after split  is :" +DBP);
+			 * 
+			 * String[] RB = ReturnBottomPrice.split(" "); String RBP = RB[1]; // int RBP1
+			 * =Integer.parseInt(RBP);
+			 * System.out.println("ReturnBottomPrice after split  is :" +RBP); String DRP =
+			 * DBP + RBP; System.out.println("Total adding Departure and Return  is :"
+			 * +DRP);
+			 */
              
 			 String TotalPrice=ForFlightPage.TotalPrice();
 			 System.out.println("Total Price  fare is :"+TotalPrice);
 			 String[] TP = TotalPrice.split(" ");
              String TF = TP[1];
              System.out.println("Total Price  fare  after split  is :" +TF);
-	  		 Assert.assertEquals(DepartBottomPrice, Departureprice);
+             Assert.assertEquals(DepartBottomPrice, Departureprice);
 			/*
 			 * Assert.assertEquals(ReturnBottomPrice, Returnprice); Assert.assertEquals(DRP,
 			 * TF);

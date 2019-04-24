@@ -12,6 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.mmt.Base.TestBase;
 
 public class Homepage extends TestBase {
+	private static final String AfterDays = "7";
+
 
 	@FindBy(how = How.XPATH, using = "//a[@class='active makeFlex hrtlCenter column']")
 	WebElement Flightsclc;
@@ -40,7 +42,7 @@ public class Homepage extends TestBase {
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'RETURN')]")
 	WebElement RETURN;
 
-	@FindBy(how = How.XPATH, using = "(//div[@class='DayPicker-Day']//p)[7]")
+	@FindBy(how = How.XPATH, using = "(//div[@class='DayPicker-Day']//p)[" + AfterDays + "]")
 	WebElement RETURNDate;
 	
 	@FindBy(xpath = "//li[contains(@class , 'react-autosuggest__suggestion')]")

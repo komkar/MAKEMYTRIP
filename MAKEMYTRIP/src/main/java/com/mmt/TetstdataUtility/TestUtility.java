@@ -12,7 +12,7 @@ public class TestUtility {
 	{
 		
 		ArrayList<Object[]> mydata = new ArrayList<Object[]>();
-		reader = new Xls_Reader("/home/mkar/eclipse-workspace/MAKEMYTRIP/src/main/java/com/mmt/excel/randomradiobutton.xlsx");
+		reader = new Xls_Reader("/home/mkar/git/MAKEMYTRIP/MAKEMYTRIP/src/main/java/com/mmt/excel/randomradiobutton.xlsx");
 		
 		for( int Row =2 ; Row<=reader.getRowCount("Sheet1"); Row++)
 		{

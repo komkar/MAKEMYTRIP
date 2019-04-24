@@ -81,7 +81,25 @@ public class ForFlightPage extends TestBase {
         		
 	}	
 	
-	
+	 public int ReturnBottomPricecount() throws InterruptedException
+	 {
+		   String RB =   ReturnBottomPrice.getText(); 
+	  		 System.out.println("ReturnBottomPrice is :" +RB);
+		   String RBP = RB.split(" ")[1];
+		   int RBP1 = Integer.parseInt(RBP);
+		   System.out.println("RBP1 is " + RBP1);
+		   return RBP1;
+	 }
+	 
+	 public int DepartBottomPricecount() throws InterruptedException
+	 {
+		   String DB =   DepartBottomPrice.getText(); 
+		   System.out.println("DepartBottomPrice is :"+ DB);
+		   String DBP = DB.split(" ")[1];
+		   int DBP1 = Integer.parseInt(DBP);
+		   System.out.println("DBP1 is " + DBP1);
+		   return DBP1;
+	 }
 	
 	public void Scrolldown() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
