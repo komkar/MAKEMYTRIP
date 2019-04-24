@@ -7,7 +7,7 @@
         <methods>
           <include name="setupForFlightPage"/>
           <include name="teardown"/>
-          <include name="DataProviderTest" invocation-numbers="0 1 2 3"/>
+          <include name="DataProviderTest" invocation-numbers="2 3"/>
         </methods>
       </class> <!-- com.mmt.Tests.ForFlightPageTest -->
     </classes>

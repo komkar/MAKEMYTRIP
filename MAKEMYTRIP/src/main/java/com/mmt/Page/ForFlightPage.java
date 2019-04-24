@@ -88,10 +88,20 @@ public class ForFlightPage extends TestBase {
 		   String[] RBS = RB.split(" ");
 		   String[] RBS1 = RBS[1].split(",");
 		   String RBS2 = RBS1[0]+ RBS1[1];
-		   System.out.println("RBP is" + RBS2);
-		   int RBP1 = Integer.parseInt(RBS2);
-		   System.out.println("RBP1 is " + RBP1);
-		   return RBP1;
+		   int RBP = Integer.parseInt(RBS2);
+		   System.out.println("ReturnBottomPricecount after split  is " + RBP);
+		   return RBP;
+	 }
+	 public int TOtalPriceMatch() throws InterruptedException
+	 {
+		   String TF =   TotalFare.getText(); 
+		   System.out.println("DepartBottomPrice is :"+ TF);
+		   String[] TFS = TF.split(" ");
+		   String[] TFS1 = TFS[1].split(",");
+		   String TFS2 = TFS1[0]+ TFS1[1];
+		   int TFP = Integer.valueOf(TFS2);
+		   System.out.println("Total Price  fare  after split  is " + TFP);
+		   return TFP;
 	 }
 	 
 	 public int DepartBottomPricecount() throws InterruptedException
@@ -101,9 +111,9 @@ public class ForFlightPage extends TestBase {
 		   String[] DBS = DB.split(" ");
 		   String[] DBS1 = DBS[1].split(",");
 		   String DBS2 = DBS1[0]+ DBS1[1];
-		   int DBP1 = Integer.valueOf(DBS2);
-		   System.out.println("DBP1 is " + DBP1);
-		   return DBP1;
+		   int DBP = Integer.valueOf(DBS2);
+		   System.out.println("DepartBottomPricecount after split  is " + DBP);
+		   return DBP;
 	 }
 	
 	public void Scrolldown() throws InterruptedException {
