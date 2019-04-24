@@ -84,9 +84,12 @@ public class ForFlightPage extends TestBase {
 	 public int ReturnBottomPricecount() throws InterruptedException
 	 {
 		   String RB =   ReturnBottomPrice.getText(); 
-	  		 System.out.println("ReturnBottomPrice is :" +RB);
-		   String RBP = RB.split(" ")[1];
-		   int RBP1 = Integer.parseInt(RBP);
+	  	   System.out.println("ReturnBottomPrice is :" +RB);
+		   String[] RBS = RB.split(" ");
+		   String[] RBS1 = RBS[1].split(",");
+		   String RBS2 = RBS1[0]+ RBS1[1];
+		   System.out.println("RBP is" + RBS2);
+		   int RBP1 = Integer.parseInt(RBS2);
 		   System.out.println("RBP1 is " + RBP1);
 		   return RBP1;
 	 }
@@ -95,8 +98,10 @@ public class ForFlightPage extends TestBase {
 	 {
 		   String DB =   DepartBottomPrice.getText(); 
 		   System.out.println("DepartBottomPrice is :"+ DB);
-		   String DBP = DB.split(" ")[1];
-		   int DBP1 = Integer.parseInt(DBP);
+		   String[] DBS = DB.split(" ");
+		   String[] DBS1 = DBS[1].split(",");
+		   String DBS2 = DBS1[0]+ DBS1[1];
+		   int DBP1 = Integer.valueOf(DBS2);
 		   System.out.println("DBP1 is " + DBP1);
 		   return DBP1;
 	 }
