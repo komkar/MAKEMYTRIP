@@ -13,7 +13,7 @@ public class BrowserSelection extends TestBase {
 public static WebDriver selectBrowser(String browserName) {
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "/home/mkar/Desktop/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "//home//mkar//git//MAKEMYTRIP//MAKEMYTRIP//lib//chromedriver_linux64//chromedriver");
 			driver = (WebDriver) new ChromeDriver();
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {

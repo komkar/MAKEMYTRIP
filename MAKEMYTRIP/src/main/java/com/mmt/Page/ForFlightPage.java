@@ -44,7 +44,6 @@ public class ForFlightPage extends TestBase {
 	  @FindBy(xpath = "(//div//div//div[contains(@class,'splitVw-footer-left')]//div[@class='pull-right marL5 text-right']//span[1])[1]")
 	  WebElement DepartBottomPrice;
 	 
-	  //(//div[@id='rt-domrt-jrny']//div//label[1]//div[3]/p[1]/span[1])[1]
   
 
 	public ForFlightPage() {

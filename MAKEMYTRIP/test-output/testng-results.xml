@@ -1,124 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="7" passed="5">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="176781" started-at="2019-04-24T13:09:58Z" finished-at="2019-04-24T13:12:55Z">
+  <suite name="Default suite" duration-ms="108" started-at="2019-04-24T13:38:05Z" finished-at="2019-04-24T13:38:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="176781" started-at="2019-04-24T13:09:58Z" finished-at="2019-04-24T13:12:55Z">
-      <class name="com.mmt.Tests.ForFlightPageTest">
-        <test-method status="PASS" signature="setupForFlightPage()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="setupForFlightPage" is-config="true" duration-ms="22425" started-at="2019-04-24T13:09:59Z" finished-at="2019-04-24T13:10:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupForFlightPage -->
-        <test-method status="PASS" signature="DataProviderTest(java.lang.String, java.lang.String)[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="DataProviderTest" duration-ms="2232" started-at="2019-04-24T13:10:21Z" description=" data driven Test" data-provider="getdatatest" finished-at="2019-04-24T13:10:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DataProviderTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="teardown" is-config="true" duration-ms="1128" started-at="2019-04-24T13:10:23Z" finished-at="2019-04-24T13:10:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setupForFlightPage()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="setupForFlightPage" is-config="true" duration-ms="17695" started-at="2019-04-24T13:10:25Z" finished-at="2019-04-24T13:10:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupForFlightPage -->
-        <test-method status="PASS" signature="DataProviderTest(java.lang.String, java.lang.String)[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="DataProviderTest" duration-ms="2140" started-at="2019-04-24T13:10:42Z" description=" data driven Test" data-provider="getdatatest" finished-at="2019-04-24T13:10:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DataProviderTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="teardown" is-config="true" duration-ms="1252" started-at="2019-04-24T13:10:44Z" finished-at="2019-04-24T13:10:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setupForFlightPage()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="setupForFlightPage" is-config="true" duration-ms="21762" started-at="2019-04-24T13:10:46Z" finished-at="2019-04-24T13:11:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupForFlightPage -->
-        <test-method status="FAIL" signature="DataProviderTest(java.lang.String, java.lang.String)[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="DataProviderTest" duration-ms="62" started-at="2019-04-24T13:11:07Z" description=" data driven Test" data-provider="getdatatest" finished-at="2019-04-24T13:11:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[6]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+    <test name="Default test" duration-ms="108" started-at="2019-04-24T13:38:05Z" finished-at="2019-04-24T13:38:05Z">
+      <class name="com.mmt.Tests.HomepageTest">
+        <test-method status="FAIL" signature="setupHomePage()[pri:0, instance:com.mmt.Tests.HomepageTest@31dc339b]" name="setupHomePage" is-config="true" duration-ms="68" started-at="2019-04-24T13:38:05Z" finished-at="2019-04-24T13:38:05Z">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[Unable to locate element: //div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][3]//label//div//span[@class='splitVw-outer append_right9']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'mkar-Lenovo-C360', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.18.0-17-generic', java.version: '1.8.0_212'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 12943, moz:profile: /tmp/rust_mozprofile.owjl4q..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.18.0-17-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0db916df-92c7-4c43-92ce-76a9c78de7c7
-*** Element info: {Using=xpath, value=//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][3]//label//div//span[@class='splitVw-outer append_right9']}]]>
+              <![CDATA[The driver is not executable: /home/mkar/git/MAKEMYTRIP/MAKEMYTRIP/lib/chromedriver_linux64/chromedriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][3]//label//div//span[@class='splitVw-outer append_right9']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'mkar-Lenovo-C360', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.18.0-17-generic', java.version: '1.8.0_212'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 12943, moz:profile: /tmp/rust_mozprofile.owjl4q..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.18.0-17-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0db916df-92c7-4c43-92ce-76a9c78de7c7
-*** Element info: {Using=xpath, value=//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][3]//label//div//span[@class='splitVw-outer append_right9']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-at com.sun.proxy.$Proxy8.findElement(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-at com.mmt.Tests.ForFlightPageTest.DataProviderTest(ForFlightPageTest.java:84)
+              <![CDATA[java.lang.IllegalStateException: The driver is not executable: /home/mkar/git/MAKEMYTRIP/MAKEMYTRIP/lib/chromedriver_linux64/chromedriver
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:140)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:329)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.mmt.Util.BrowserSelection.selectBrowser(BrowserSelection.java:17)
+at com.mmt.Base.TestBase.initialization(TestBase.java:42)
+at com.mmt.Tests.HomepageTest.setupHomePage(HomepageTest.java:22)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
@@ -140,78 +55,37 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DataProviderTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="teardown" is-config="true" duration-ms="1305" started-at="2019-04-24T13:11:07Z" finished-at="2019-04-24T13:11:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setupForFlightPage()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="setupForFlightPage" is-config="true" duration-ms="20286" started-at="2019-04-24T13:11:09Z" finished-at="2019-04-24T13:11:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupForFlightPage -->
-        <test-method status="FAIL" signature="DataProviderTest(java.lang.String, java.lang.String)[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="DataProviderTest" duration-ms="48" started-at="2019-04-24T13:11:29Z" description=" data driven Test" data-provider="getdatatest" finished-at="2019-04-24T13:11:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[7]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- setupHomePage -->
+        <test-method status="SKIP" signature="verifyForFlightpageLocationTest()[pri:0, instance:com.mmt.Tests.HomepageTest@31dc339b]" name="verifyForFlightpageLocationTest" duration-ms="0" started-at="2019-04-24T13:38:05Z" finished-at="2019-04-24T13:38:05Z">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[Unable to locate element: //div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][7]//label//div//span[@class='splitVw-outer append_right9']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'mkar-Lenovo-C360', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.18.0-17-generic', java.version: '1.8.0_212'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 13378, moz:profile: /tmp/rust_mozprofile.CwXTyh..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.18.0-17-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ea44d4ba-c5ba-4cbc-af2a-811519a759e8
-*** Element info: {Using=xpath, value=//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][7]//label//div//span[@class='splitVw-outer append_right9']}]]>
+              <![CDATA[The driver is not executable: /home/mkar/git/MAKEMYTRIP/MAKEMYTRIP/lib/chromedriver_linux64/chromedriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][7]//label//div//span[@class='splitVw-outer append_right9']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'mkar-Lenovo-C360', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.18.0-17-generic', java.version: '1.8.0_212'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 13378, moz:profile: /tmp/rust_mozprofile.CwXTyh..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.18.0-17-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ea44d4ba-c5ba-4cbc-af2a-811519a759e8
-*** Element info: {Using=xpath, value=//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][7]//label//div//span[@class='splitVw-outer append_right9']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-at com.sun.proxy.$Proxy8.findElement(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-at com.mmt.Tests.ForFlightPageTest.DataProviderTest(ForFlightPageTest.java:84)
+              <![CDATA[java.lang.IllegalStateException: The driver is not executable: /home/mkar/git/MAKEMYTRIP/MAKEMYTRIP/lib/chromedriver_linux64/chromedriver
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:140)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:329)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.mmt.Util.BrowserSelection.selectBrowser(BrowserSelection.java:17)
+at com.mmt.Base.TestBase.initialization(TestBase.java:42)
+at com.mmt.Tests.HomepageTest.setupHomePage(HomepageTest.java:22)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
@@ -233,51 +107,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DataProviderTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="teardown" is-config="true" duration-ms="1503" started-at="2019-04-24T13:11:29Z" finished-at="2019-04-24T13:11:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setupForFlightPage()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="setupForFlightPage" is-config="true" duration-ms="19850" started-at="2019-04-24T13:11:31Z" finished-at="2019-04-24T13:11:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupForFlightPage -->
-        <test-method status="PASS" signature="CountDepartureandReturnFights()[pri:1, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="CountDepartureandReturnFights" duration-ms="7284" started-at="2019-04-24T13:11:50Z" description="Count of Departure and Return Fights" finished-at="2019-04-24T13:11:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CountDepartureandReturnFights -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="teardown" is-config="true" duration-ms="1183" started-at="2019-04-24T13:11:58Z" finished-at="2019-04-24T13:11:59Z">
+        </test-method> <!-- verifyForFlightpageLocationTest -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.mmt.Tests.HomepageTest@31dc339b]" name="teardown" is-config="true" duration-ms="0" started-at="2019-04-24T13:38:05Z" finished-at="2019-04-24T13:38:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setupForFlightPage()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="setupForFlightPage" is-config="true" duration-ms="19988" started-at="2019-04-24T13:11:59Z" finished-at="2019-04-24T13:12:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupForFlightPage -->
-        <test-method status="PASS" signature="NonStopFlightsCount()[pri:2, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="NonStopFlightsCount" duration-ms="7500" started-at="2019-04-24T13:12:19Z" description="Non Stop Departure and Return Flights count" finished-at="2019-04-24T13:12:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NonStopFlightsCount -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="teardown" is-config="true" duration-ms="1307" started-at="2019-04-24T13:12:26Z" finished-at="2019-04-24T13:12:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setupForFlightPage()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="setupForFlightPage" is-config="true" duration-ms="18101" started-at="2019-04-24T13:12:28Z" finished-at="2019-04-24T13:12:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupForFlightPage -->
-        <test-method status="PASS" signature="OneStopFlightsCount()[pri:3, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="OneStopFlightsCount" duration-ms="7684" started-at="2019-04-24T13:12:46Z" description="Count of One Stop Departue and Return Flights" finished-at="2019-04-24T13:12:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OneStopFlightsCount -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.mmt.Tests.ForFlightPageTest@31610302]" name="teardown" is-config="true" duration-ms="1307" started-at="2019-04-24T13:12:54Z" finished-at="2019-04-24T13:12:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.mmt.Tests.ForFlightPageTest -->
+      </class> <!-- com.mmt.Tests.HomepageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
