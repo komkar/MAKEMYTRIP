@@ -41,31 +41,24 @@ public class ForFlightPageTest extends TestBase {
 
 	}
 
-	  @Test(priority = 1,description = "Count of Departure and Return Fights")
-	  public void CountDepartureandReturnFights() throws InterruptedException
-	   {
-		  ForFlightPage.Scrolldown();
-		  ForFlightPage.DepartureFlightCount();
-	      ForFlightPage.ReturnFlightCount();
-	  }
-	 
-	  @Test (priority = 2, description = "Non Stop Departure and Return Flights count")
-	  public void NonStopFlightsCount() throws InterruptedException 
-	   {
-	      ForFlightPage.NonstopCount();
-	      ForFlightPage.Scrolldown();
-	      ForFlightPage.DepartureFlightCount();
-	      ForFlightPage.ReturnFlightCount();
-	      }
-	
-	  @Test (priority = 3, description = "Count of One Stop Departue and Return Flights")
-	  public void OneStopFlightsCount() throws InterruptedException 
-	  {
-	      ForFlightPage.onestopCount();
-	      ForFlightPage.Scrolldown();
-	      ForFlightPage.DepartureFlightCount(); 
-	      ForFlightPage.ReturnFlightCount();
-	  }
+	/*
+	 * @Test(priority = 1,description = "Count of Departure and Return Fights")
+	 * public void CountDepartureandReturnFights() throws InterruptedException {
+	 * ForFlightPage.Scrolldown(); ForFlightPage.DepartureFlightCount();
+	 * ForFlightPage.ReturnFlightCount(); }
+	 * 
+	 * @Test (priority = 2, description =
+	 * "Non Stop Departure and Return Flights count") public void
+	 * NonStopFlightsCount() throws InterruptedException {
+	 * ForFlightPage.NonstopCount(); ForFlightPage.Scrolldown();
+	 * ForFlightPage.DepartureFlightCount(); ForFlightPage.ReturnFlightCount(); }
+	 * 
+	 * @Test (priority = 3, description =
+	 * "Count of One Stop Departue and Return Flights") public void
+	 * OneStopFlightsCount() throws InterruptedException {
+	 * ForFlightPage.onestopCount(); ForFlightPage.Scrolldown();
+	 * ForFlightPage.DepartureFlightCount(); ForFlightPage.ReturnFlightCount(); }
+	 */
 	 
 	  @DataProvider public Iterator<Object[]> getdatatest()
 	  { 
@@ -75,7 +68,7 @@ public class ForFlightPageTest extends TestBase {
 	  
 	  @Test(dataProvider ="getdatatest", description=" data driven Test") 
 	  public void DataProviderTest(String DepartureRadio, String Returnradio) throws InterruptedException {
-         if(driver.findElement(By.xpath("//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][\"+DepartureRadio+\"]//label//div//span[@class='splitVw-outer append_right9']")).isDisplayed()) 
+         if(driver.findElement(By.xpath("//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing']["+DepartureRadio+"]//label//div//span[@class='splitVw-outer append_right9']")).isDisplayed()) 
           { 
         	WebElement DepartureradioButton =  driver.findElement(By.xpath("//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing']["+DepartureRadio+"]//label//div//span[@class='splitVw-outer append_right9']"));
         	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", DepartureradioButton);
@@ -96,21 +89,30 @@ public class ForFlightPageTest extends TestBase {
 	    	 
 	  		int DepartBottomPricecount = ForFlightPage.DepartBottomPricecount();
 	  		int ReturnBottomPricecount = ForFlightPage.ReturnBottomPricecount();
-	  		int Totalprice = DepartBottomPricecount + ReturnBottomPricecount;
+
+	  		int Totalprice = DepartBottomPricecount + ReturnBottomPricecount ;
 	  		  
-	  		int TOtalPriceMatch = ForFlightPage.TOtalPriceMatch();
-		 
+	  		int TOtalPriceFare = ForFlightPage.TOtalPriceMatch();
+	  		int DiscountPrice=ForFlightPage.Discountpriceget();
+
+	  		int TOtalPricewithdiscou =  DiscountPrice + TOtalPriceFare;
+	  		System.out.println("TOtalPricewithdiscou is "+TOtalPricewithdiscou);
+		   
              Assert.assertEquals(DepartBottomPrice, Departureprice);
 			 Assert.assertEquals(ReturnBottomPrice, Returnprice); 
-			 Assert.assertEquals(Totalprice,TOtalPriceMatch);      
+			 Assert.assertEquals(Totalprice,TOtalPricewithdiscou);   
+			 Thread.sleep(7000);
         }
 	  }
 	
 
-	  @AfterMethod public void teardown()
+	
+	  @AfterMethod 
+	  public void teardown()
 	  {
 		  driver.quit();
-		}
+		 }
+	 
 	 
 
 }

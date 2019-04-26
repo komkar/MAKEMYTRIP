@@ -43,6 +43,10 @@ public class ForFlightPage extends TestBase {
 	  
 	  @FindBy(xpath = "(//div//div//div[contains(@class,'splitVw-footer-left')]//div[@class='pull-right marL5 text-right']//span[1])[1]")
 	  WebElement DepartBottomPrice;
+	  
+	  @FindBy(xpath = "//p[@class='disc-applied']//span[2]")
+	  WebElement DiscountPrice;
+	
 
 
 	public ForFlightPage() {
@@ -89,10 +93,25 @@ public class ForFlightPage extends TestBase {
 		   System.out.println("ReturnBottomPricecount after split  is " + RBP);
 		   return RBP;
 	 }
+	 public  int Discountpriceget() throws InterruptedException
+	 {
+		 int DPP ;
+		if(DiscountPrice.isDisplayed())
+		{
+			   String DP = DiscountPrice.getText(); 
+		       System.out.println("DiscountPrice is :"+ DP);
+		       String[] DPS = DP.split(" ");
+		       String DPS1 = DPS[1].replace(",", "");
+		        DPP = Integer.valueOf(DPS1);
+		       System.out.println("DiscountPrice after split  is " + DPP);
+		}
+		return DPP = 0;	
+	 }
+	 
 	 public int TOtalPriceMatch() throws InterruptedException
 	 {
 		   String TF =   TotalFare.getText(); 
-		   System.out.println("DepartBottomPrice is :"+ TF);
+		   System.out.println("TotalFare is :"+ TF);
 		   String[] TFS = TF.split(" ");
 		   String TFS1 = TFS[1].replace(",", "");
 		   int TFP = Integer.valueOf(TFS1);
