@@ -153,13 +153,7 @@ public class Xls_Reader {
 			           cellText = cal.get(Calendar.MONTH)+1 + "/" +
 			                      cal.get(Calendar.DAY_OF_MONTH) + "/" +
 			                      cellText;
-			           
-			          // System.out.println(cellText);
-
-			         }
-
-				  
-				  
+			         }  
 				  return cellText;
 			  }else if(cell.getCellType()==Cell.CELL_TYPE_BLANK)
 			      return "";
@@ -172,10 +166,7 @@ public class Xls_Reader {
 					return "row "+rowNum+" or column "+colNum +" does not exist  in xls";
 				}
 			}
-			
-			
-			// returns true if data is set successfully else false
-			public boolean setCellData(String sheetName,String colName,int rowNum, String data){
+		public boolean setCellData(String sheetName,String colName,int rowNum, String data){
 				try{
 				fis = new FileInputStream(path); 
 				workbook = new XSSFWorkbook(fis);
@@ -187,11 +178,7 @@ public class Xls_Reader {
 				int colNum=-1;
 				if(index==-1)
 					return false;
-				
-				
 				sheet = workbook.getSheetAt(index);
-				
-
 				row=sheet.getRow(0);
 				for(int i=0;i<row.getLastCellNum();i++){
 					//System.out.println(row.getCell(i).getStringCellValue().trim());
@@ -210,10 +197,6 @@ public class Xls_Reader {
 				if (cell == null)
 			        cell = row.createCell(colNum);
 
-			    // cell style
-			    //CellStyle cs = workbook.createCellStyle();
-			    //cs.setWrapText(true);
-			    //cell.setCellStyle(cs);
 			    cell.setCellValue(data);
 
 			    fileOut = new FileOutputStream(path);
@@ -231,7 +214,6 @@ public class Xls_Reader {
 			}
 			// returns true if data is set successfully else false
 			public boolean setCellData(String sheetName,String colName,int rowNum, String data,String url){
-				//System.out.println("setCellData setCellData******************");
 				try{
 				fis = new FileInputStream(path); 
 				workbook = new XSSFWorkbook(fis);
@@ -253,7 +235,7 @@ public class Xls_Reader {
 				
 				if(colNum==-1)
 					return false;
-				sheet.autoSizeColumn(colNum); //ashish
+				sheet.autoSizeColumn(colNum); 
 				row = sheet.getRow(rowNum-1);
 				if (row == null)
 					row = sheet.createRow(rowNum-1);
@@ -345,9 +327,6 @@ public class Xls_Reader {
 				if (row == null)
 					row = sheet.createRow(0);
 				
-				//cell = row.getCell();	
-				//if (cell == null)
-				//System.out.println(row.getLastCellNum());
 				if(row.getLastCellNum() == -1)
 					cell = row.createCell(0);
 				else
@@ -379,7 +358,7 @@ public class Xls_Reader {
 				sheet=workbook.getSheet(sheetName);
 				XSSFCellStyle style = workbook.createCellStyle();
 				style.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-				XSSFCreationHelper createHelper = workbook.getCreationHelper();
+			    XSSFCreationHelper createHelper = workbook.getCreationHelper();
 				style.setFillPattern(HSSFCellStyle.NO_FILL);
 				for(int i =0;i<getRowCount(sheetName);i++){
 					row=sheet.getRow(i);	
@@ -465,11 +444,7 @@ public class Xls_Reader {
 			// to run this on stand alone
 			public static void main(String arg[]) throws IOException{
 				
-				//System.out.println(filename);
 				Xls_Reader datatable = null;
-					/* datatable = new Xls_Reader(System.getProperty("user.dir")+"\\src\\com\\qtpselenium\\xls\\Controller.xlsx");
-						for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
-							System.out.println(datatable.getCellData("TC5", col, 1)); 
-						} */
+					
 			}
 }

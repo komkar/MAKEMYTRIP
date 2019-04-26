@@ -28,7 +28,6 @@ public class ForFlightPageTest extends TestBase {
 
 	@BeforeMethod
 	public void setupForFlightPage() throws InterruptedException {
-
 		initialization();
 		homepage = new Homepage();
 		ForFlightPage = homepage.searchflightocation();
@@ -42,8 +41,6 @@ public class ForFlightPageTest extends TestBase {
 
 	}
 
-	
-	  
 	  @Test(priority = 1,description = "Count of Departure and Return Fights")
 	  public void CountDepartureandReturnFights() throws InterruptedException
 	   {
@@ -68,17 +65,16 @@ public class ForFlightPageTest extends TestBase {
 	      ForFlightPage.Scrolldown();
 	      ForFlightPage.DepartureFlightCount(); 
 	      ForFlightPage.ReturnFlightCount();
-	  
 	  }
 	 
-	  @DataProvider public Iterator<Object[]> getdatatest() { 
+	  @DataProvider public Iterator<Object[]> getdatatest()
+	  { 
 		  ArrayList<Object[]> testdata = TestUtility.getDatafromExcel();
 		  return testdata.iterator();
-		  }
+	  }
 	  
 	  @Test(dataProvider ="getdatatest", description=" data driven Test") 
 	  public void DataProviderTest(String DepartureRadio, String Returnradio) throws InterruptedException {
-	   //	  new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(element));
          if(driver.findElement(By.xpath("//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing'][\"+DepartureRadio+\"]//label//div//span[@class='splitVw-outer append_right9']")).isDisplayed()) 
           { 
         	WebElement DepartureradioButton =  driver.findElement(By.xpath("//div[@id='ow_domrt-jrny']/div[2]//div[@class='fli-list splitVw-listing']["+DepartureRadio+"]//label//div//span[@class='splitVw-outer append_right9']"));
@@ -110,10 +106,11 @@ public class ForFlightPageTest extends TestBase {
         }
 	  }
 	
-	  @AfterMethod 
-	  public void teardown() { 
+
+	  @AfterMethod public void teardown()
+	  {
 		  driver.quit();
-	  }
+		}
 	 
 
 }

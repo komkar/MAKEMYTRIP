@@ -43,8 +43,7 @@ public class ForFlightPage extends TestBase {
 	  
 	  @FindBy(xpath = "(//div//div//div[contains(@class,'splitVw-footer-left')]//div[@class='pull-right marL5 text-right']//span[1])[1]")
 	  WebElement DepartBottomPrice;
-	 
-  
+
 
 	public ForFlightPage() {
 			PageFactory.initElements(driver, this);
@@ -85,9 +84,8 @@ public class ForFlightPage extends TestBase {
 		   String RB =   ReturnBottomPrice.getText(); 
 	  	   System.out.println("ReturnBottomPrice is :" +RB);
 		   String[] RBS = RB.split(" ");
-		   String[] RBS1 = RBS[1].split(",");
-		   String RBS2 = RBS1[0]+ RBS1[1];
-		   int RBP = Integer.parseInt(RBS2);
+		   String RBS1 = RBS[1].replace(",", "");
+		   int RBP = Integer.parseInt(RBS1);
 		   System.out.println("ReturnBottomPricecount after split  is " + RBP);
 		   return RBP;
 	 }
@@ -96,9 +94,8 @@ public class ForFlightPage extends TestBase {
 		   String TF =   TotalFare.getText(); 
 		   System.out.println("DepartBottomPrice is :"+ TF);
 		   String[] TFS = TF.split(" ");
-		   String[] TFS1 = TFS[1].split(",");
-		   String TFS2 = TFS1[0]+ TFS1[1];
-		   int TFP = Integer.valueOf(TFS2);
+		   String TFS1 = TFS[1].replace(",", "");
+		   int TFP = Integer.valueOf(TFS1);
 		   System.out.println("Total Price  fare  after split  is " + TFP);
 		   return TFP;
 	 }
@@ -108,9 +105,8 @@ public class ForFlightPage extends TestBase {
 		   String DB =   DepartBottomPrice.getText(); 
 		   System.out.println("DepartBottomPrice is :"+ DB);
 		   String[] DBS = DB.split(" ");
-		   String[] DBS1 = DBS[1].split(",");
-		   String DBS2 = DBS1[0]+ DBS1[1];
-		   int DBP = Integer.valueOf(DBS2);
+		   String DBS1 = DBS[1].replace(",", "");
+		   int DBP = Integer.valueOf(DBS1);
 		   System.out.println("DepartBottomPricecount after split  is " + DBP);
 		   return DBP;
 	 }

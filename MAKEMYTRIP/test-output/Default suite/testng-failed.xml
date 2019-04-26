@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mmt.Tests.HomepageTest">
+      <class name="com.mmt.Tests.ForFlightPageTest">
         <methods>
-          <include name="verifyForFlightpageLocationTest"/>
-          <include name="setupHomePage"/>
+          <include name="setupForFlightPage"/>
           <include name="teardown"/>
+          <include name="DataProviderTest" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- com.mmt.Tests.HomepageTest -->
+      </class> <!-- com.mmt.Tests.ForFlightPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

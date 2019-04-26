@@ -44,8 +44,9 @@ public class TestBase {
 		eventListener = new WebEventListener();
 		eventfiringdriver.register(eventListener);
 		driver = eventfiringdriver;
-
 		driver.get(prop.getProperty("url"));
+		driver.manage().deleteAllCookies();
+
 		
 
 	}
